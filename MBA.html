@@ -32,7 +32,7 @@
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/thanh-cong-vuong/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
 							<li><a href="https://www.kaggle.com/vthcong" class="icon brands alt fa-kaggle"><span class="label">Kaggle</span></a></li>
-							<li><a href="https://github.com/vthcong" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<!-- <li><a href="https://github.com/vthcong" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li> -->
 						</ul>
 					</nav>
 
@@ -41,8 +41,8 @@
 
 						<!-- Post -->
 							<section class="post">
-								<ul class="actions special" style = "margin-top: -100px;
-																	margin-left: -530px;">
+								<ul class="actions special" style = "margin-top: -9%;
+																	margin-left: -57%;">
 									<li><a href="projects.html" class="button">Back</a></li>
 								</ul>
 								<header class="major">
@@ -83,10 +83,9 @@ GROUP BY SalesOrderNumber
 HAVING COUNT(ProductKey) >= 2;
 </code></pre>
 									<p style = "margin-bottom: 10px;">We have the following result:</p>
-									<img src="images/my/MBA/num_larger than 2.png" 
+									<div style = "text-align: center;"><img src="images/my/MBA/num_larger than 2.png" 
 											style="width:400px;
-													height:300px;
-													margin-left: 450px;"/>
+													height:300px;" class = "center"/></div>
 									<hr>
 									<h3>2. List out the SalesOrderNumber and ProductKey of orders having at least two product keys</h3>
 									<pre><code>SELECT
@@ -102,11 +101,9 @@ FROM
 JOIN FactInternetSales AS FIS ON Orderlist.SalesOrderNumber = FIS.SalesOrderNumber;
 </code></pre>
 									<p style = "margin-bottom: 10px;">We have the following result:</p>
-									<img src="images/my/MBA/ordernum_prdkey.png" 
+									<div style = "text-align: center;"><img src="images/my/MBA/ordernum_prdkey.png" 
 											style="width:300px;
-													height:300px;
-													margin-left: 450px;
-													margin-bottom: 20px;"/>
+													height:300px;" class = "center"/></div>
 									<p>Notice that all the orders returned have more than 1 product key. Before seeing which combination of two products occurs most frequent, let’s use common table expression (CTE) to use this result for further uses.</p>
 									<hr />
 
@@ -154,18 +151,14 @@ WHERE Info1.ProductKey != Info2.ProductKey
 											<li><b>Info1.ProductKey < Info2.ProductKey</b></br>This is to avoid duplicates. If this condition does not exist, the result will be:</li>
 										</ul>
 									</p>
-									<img src="images/my/MBA/duplicate.png" 
+									<div style = "text-align: center;"><img src="images/my/MBA/duplicate.png" 
 											style="width:300px;
-													height:300px;
-													margin-left: 450px;
-													margin-bottom: 20px;"/>
+													height:300px;" class = "center"/></div>
 									<p>Look at the first and the third record where <em>Product1</em> equals <em>Product2</em> and vice versa. This makes the result is twice as long as it should be. Therefore, removing duplicates by using second condition is a must.</p>
 									<p style = "margin-bottom: 10px;">This is the result without duplicates:</p>
-									<img src="images/my/MBA/without_duplicate.png" 
+									<div style = "text-align: center;"><img src="images/my/MBA/without_duplicate.png" 
 											style="width:300px;
-													height:300px;
-													margin-left: 450px;
-													margin-bottom: 20px;"/>
+													height:300px;" class = "center"/></div>
 									<hr />
 
 									<h3>5. Calculate the frequency of a pair of two products</h3>
@@ -196,10 +189,9 @@ GROUP BY
 ORDER BY COUNT(*);
 </code></pre>
 									<p style = "margin-bottom: 10px;">We have the following result:</p>
-									<img src="images/my/MBA/frequency.png" 
+									<div style = "text-align: center;"><img src="images/my/MBA/frequency.png" 
 											style="width:300px;
-													height:300px;
-													margin-left: 450px;"/>
+													height:300px;" class = "center"/></div>
 									<p>From the result, we can interpret that if a customer buys product 477, they are most likely to buy product 478 and 479. Therefore, recommending customers to buy these two products would be likely to improve sales revenue.</p>
 
 									<hr>
@@ -248,7 +240,7 @@ ORDER BY COUNT(*);
 							</section>
 							<section>
 								<h3>Phone</h3>
-								<p>0986 562 105</p>
+								<p>09xx xxx x05</p>
 							</section>
 							<section>
 								<h3>Email</h3>
@@ -259,7 +251,7 @@ ORDER BY COUNT(*);
 								<ul class="icons alt">
 									<li><a href="https://www.linkedin.com/in/thanh-cong-vuong/" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
 									<li><a href="https://www.kaggle.com/vthcong" class="icon brands alt fa-kaggle"><span class="label">Kaggle</span></a></li>
-									<li><a href="https://github.com/vthcong" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<!-- <li><a href="https://github.com/vthcong" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li> -->
 								</ul>
 							</section>
 						</section>
