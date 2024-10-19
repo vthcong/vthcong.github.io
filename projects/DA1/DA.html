@@ -39,34 +39,25 @@
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Post -->
-							<section class="post">
-								<ul class="actions special" style = "margin-top: -9%;
-																	margin-left: -57%;">
-									<li><a href="projects.html" class="button">Back</a></li>
-								</ul>
-								<header class="major">
-									<h1>Data Analysis Project</h1>
-								</header>
+						<h1>My Interactive Data Visualizations</h1>
+							<div id="myPlot"></div>
 
-								<!-- Text stuff -->
-									<h2>Overview</h2>
-									<p> Test visual</p>
-									
-									<hr />
-									<h2>b</h2>
-									<p>a</p>
-									<h3>Description</h3>
-											<ul>
-												<li><b>1</b> table: 2</li>
-												<ol>
-													<li><em>3</em>: 4</li>
-													<li><em>5</em>: 6</li>
-												</ol>
-											</ul>						
-									
-									<hr />
-									<h3>a</h3>
+							<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+							<script>
+								var data = [{
+									x: ['Project A', 'Project B', 'Project C'],
+									y: [20, 14, 23],
+									type: 'bar'
+								}];
+
+								var layout = {
+									title: 'Project Completion',
+									xaxis: { title: 'Projects' },
+									yaxis: { title: 'Tasks Completed' }
+								};
+
+								Plotly.newPlot('myPlot', data, layout);
+							</script>
 
 					</div>
 
