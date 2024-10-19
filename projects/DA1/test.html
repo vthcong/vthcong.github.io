@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Data Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #myPlot {
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Interactive Data Visualizations</h1>
+    <div id="myPlot"></div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        var data = [{
+            x: ['Project A', 'Project B', 'Project C'],
+            y: [20, 14, 23],
+            type: 'bar'
+        }];
+
+        var layout = {
+            title: 'Project Completion',
+            xaxis: { title: 'Projects' },
+            yaxis: { title: 'Tasks Completed' }
+        };
+
+        Plotly.newPlot('myPlot', data, layout);
+    </script>
+</body>
+</html>
